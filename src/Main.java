@@ -88,5 +88,12 @@ public class Main {
         });
         System.out.println("XP: " + devPaloma.calcularTotalXp());
 
+
+        System.out.println("================");
+
+        System.out.println(devClark.isBootcampFinish(bootcamp));
+        System.out.println(devPaloma.isBootcampFinish(bootcamp));
+
+
     }
 }

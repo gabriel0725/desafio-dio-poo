@@ -37,6 +37,14 @@ public class Dev {
                 .sum();
     }
 
+    public String isBootcampFinish(Bootcamp bootcamp){
+        if (getGetconteudosConcluidos().size() == bootcamp.getConteudos().size()){
+            return "PARABENS " + getNome().toUpperCase() + ", VOCÊ FINALIZOU O " + bootcamp.getNome().toUpperCase() +", BAIXE SEU CERTIFICADO";
+        } else {
+            return getNome().toUpperCase() + " VOCÊ TEM " + getConteudosInscritos().size() + " CONTEUDO(S) PENDENTES PARA FINALIZAR O BOOTCAMP";
+        }
+    }
+
     public String getNome() {
         return nome;
     }
