@@ -1,4 +1,6 @@
+import br.com.clark.desafio.dominio.Bootcamp;
 import br.com.clark.desafio.dominio.Curso;
+import br.com.clark.desafio.dominio.Dev;
 import br.com.clark.desafio.dominio.Mentoria;
 
 import java.time.LocalDate;
@@ -24,9 +26,39 @@ public class Main {
         mentoria.setDescricao("descrição da mentoria");
         mentoria.setData(LocalDate.now());
 
-        System.out.println(curso1);
+       /* System.out.println(curso1);
         System.out.println(curso2);
-        System.out.println(mentoria);
+        System.out.println(mentoria);*/
+
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descrição Bootcamp Java Developer");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
+
+        Dev devClark = new Dev();
+        devClark.setNome("Clark");
+        devClark.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos inscritos Clark: \n" + devClark.getConteudosInscritos());
+        devClark.progredir();
+        devClark.progredir();
+        System.out.println("-------");
+        System.out.println("Conteúdos inscritos Clark: \n" + devClark.getConteudosInscritos());
+        System.out.println("Conteúdos Concluidos Clark: \n" + devClark.getGetconteudosConcluidos());
+        System.out.println("XP: " + devClark.calcularTotalXp());
+
+        System.out.println("===================================================================");
+
+        Dev devPaloma = new Dev();
+        devPaloma.setNome("Paloma");
+        devPaloma.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos inscritos Paloma: \n" + devPaloma.getConteudosInscritos());
+        devPaloma.progredir();
+        System.out.println("-------");
+        System.out.println("Conteúdos inscritos Paloma: \n" + devPaloma.getConteudosInscritos());
+        System.out.println("Conteúdos Concluidos Paloma: \n" + devPaloma.getGetconteudosConcluidos());
+        System.out.println("XP: " + devPaloma.calcularTotalXp());
 
     }
 }
