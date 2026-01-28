@@ -40,12 +40,25 @@ public class Main {
         Dev devClark = new Dev();
         devClark.setNome("Clark");
         devClark.inscreverBootcamp(bootcamp);
-        System.out.println("Conteúdos inscritos Clark: \n" + devClark.getConteudosInscritos());
+        System.out.println("Conteúdos inscritos Clark:");
+        devClark.getConteudosInscritos().forEach(conteudo -> {
+            System.out.println("--------------------------------");
+            System.out.println(conteudo);
+        });
         devClark.progredir();
         devClark.progredir();
         System.out.println("-------");
-        System.out.println("Conteúdos inscritos Clark: \n" + devClark.getConteudosInscritos());
-        System.out.println("Conteúdos Concluidos Clark: \n" + devClark.getGetconteudosConcluidos());
+        System.out.println("Conteúdos inscritos Clark:");
+        devClark.getConteudosInscritos().forEach(conteudo -> {
+            System.out.println("--------------------------------");
+            System.out.println(conteudo);
+        });
+        System.out.println("===================================================================");
+        System.out.println("Conteúdos Concluidos Clark:");
+        devClark.getGetconteudosConcluidos().forEach(conteudo -> {
+            System.out.println("--------------------------------");
+            System.out.println(conteudo);
+        });
         System.out.println("XP: " + devClark.calcularTotalXp());
 
         System.out.println("===================================================================");
@@ -53,11 +66,26 @@ public class Main {
         Dev devPaloma = new Dev();
         devPaloma.setNome("Paloma");
         devPaloma.inscreverBootcamp(bootcamp);
-        System.out.println("Conteúdos inscritos Paloma: \n" + devPaloma.getConteudosInscritos());
+        System.out.println("Conteúdos inscritos Paloma:");
+        devPaloma.getConteudosInscritos().forEach(conteudo -> {
+            System.out.println("--------------------------------");
+            System.out.println(conteudo);
+        });
+        devPaloma.progredir();
+        devPaloma.progredir();
         devPaloma.progredir();
         System.out.println("-------");
-        System.out.println("Conteúdos inscritos Paloma: \n" + devPaloma.getConteudosInscritos());
-        System.out.println("Conteúdos Concluidos Paloma: \n" + devPaloma.getGetconteudosConcluidos());
+        System.out.println("Conteúdos inscritos Paloma:");
+        devPaloma.getConteudosInscritos().forEach(conteudo -> {
+            System.out.println("--------------------------------");
+            System.out.println(conteudo);
+        });
+        System.out.println("===================================================================");
+        System.out.println("Conteúdos Concluidos Paloma:");
+        devPaloma.getGetconteudosConcluidos().forEach(conteudo -> {
+            System.out.println("--------------------------------");
+            System.out.println(conteudo);
+        });
         System.out.println("XP: " + devPaloma.calcularTotalXp());
 
     }
